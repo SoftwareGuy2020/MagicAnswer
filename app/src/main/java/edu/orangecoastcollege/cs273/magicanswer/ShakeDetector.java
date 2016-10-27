@@ -33,9 +33,9 @@ public class ShakeDetector implements SensorEventListener {
 
             // compare all 3 values against gravity
 
-            float gForceX = SensorManager.GRAVITY_EARTH;
-            float gForceY = SensorManager.GRAVITY_EARTH;
-            float gForceZ = SensorManager.GRAVITY_EARTH;
+            float gForceX = x - SensorManager.GRAVITY_EARTH;
+            float gForceY = y - SensorManager.GRAVITY_EARTH;
+            float gForceZ = z - SensorManager.GRAVITY_EARTH;
 
 
             double vector = Math.pow(gForceX, 2.0) + Math.pow(gForceY, 2.0) + Math.pow(gForceZ, 2.0);
